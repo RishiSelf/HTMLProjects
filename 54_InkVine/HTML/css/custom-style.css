@@ -1,0 +1,1902 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+/*	word-break: break-all;*/
+    word-wrap: break-word;
+}
+*:focus, *:visited, *:linked {
+    outline: 0;
+    box-shadow: none;
+}
+input:focus,
+select:focus,
+button:focus,
+a:focus{
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+a::linked{
+    outline: 0;
+}
+
+ul,ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+label {
+    font-weight: normal;
+}
+
+
+.no-border {
+    border: 0 none !important;
+}
+li, input, p, select, button, label {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*** Placehoolder ***/
+input[type='text']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{ /* Chrome/Opera/Safari */
+    color: #696969;
+    opacity: 1;
+}
+input[type='text']::-moz-placeholder,
+input[type='password']::-moz-placeholder,
+textarea::-moz-placeholder{ /* Firefox 19+ */
+    color: #696969;
+    opacity: 1;    
+}
+input[type='text']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
+textarea:-ms-input-placeholder{ /* IE 10+ */
+    color: #696969;
+    opacity: 1;    
+}
+input[type='text']:-moz-placeholder,
+input[type='password']:-ms-input-placeholder,
+textarea:-ms-input-placeholder { /* Firefox 18- */
+    color: #696969;
+    opacity: 1;    
+}
+
+/****** Custom Selectbox Elements ***/
+.select-box-row {
+    position: relative;
+    background: #fff;
+    border: 1px solid #6c6c6c;
+}
+.select-box-row .selectbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    z-index: 2;
+    border: 0 none;
+    background: none;
+    padding-right: 30px;
+    background: none;
+    border: 0 none;
+}
+.select-box-row .fa {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -8px;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: .8;
+    z-index: 1;
+}
+
+/****** Custom Checkbox Elements ***/
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+.styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #d9d9d9;
+    border-radius: 4px 4px;
+}
+.styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 9px;
+    background: #13a169;
+    width: 4px;
+    height: 4px;
+    box-shadow: 4px 0 0 #13a169, 4px 0 0 #13a169, 4px -2px 0 #13a169, 4px -4px 0 #13a169, 4px -6px 0 #13a169, 4px -8px 0 #13a169;
+    
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/****** Custom radio Elements ***/
+.styled-radio {
+    position: absolute;
+    opacity: 0;
+}
+.styled-radio + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+.styled-radio + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 18px;
+    height: 18px;
+/*    background: #d9d9d9;*/
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+    border: 1px solid #13a169;
+}
+.styled-radio:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    background: #13a169;
+    width: 12px;
+    height: 12px;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+
+
+/****** Custom Textbox Elements ***/
+.form-container .form-control{
+    font-size: 13px;
+    font-weight: 400;
+    color: #696969;
+    text-align: left;
+    height: 45px;
+    background: #e3e1e1;
+    border: 0 none;
+    box-shadow: none;
+    margin-bottom: 20px;
+    
+    border-radius: 6px 6px;
+    -webkit-border-radius: 6px 6px;
+    -moz-border-radius: 6px 6px;
+    -o-border-radius: 6px 6px;
+}
+.form-container textarea.form-control {
+    height: 100px;
+}
+
+/***** Pagination Frame ****/
+.pagination-frame {
+    text-align: center;
+    padding: 20px 0;
+}
+.pagination-frame .pagination>li:first-child>a, 
+.pagination-frame  .pagination>li:first-child>span {
+    padding:6px 20px;
+    border-radius: 20px 20px;
+}
+.pagination-frame .pagination>li:last-child>a, 
+.pagination-frame .pagination>li:last-child>span {
+    padding:6px 20px;
+    border-radius: 20px 20px;
+}
+.pagination-frame .pagination li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+    font-size: 14px;
+}
+.pagination-frame .pagination li span {
+    background: none;
+    padding: 2px 8px;
+    font-size: 14px;
+    color: #3d3d3d;
+    border: 0 none;
+    cursor: pointer;
+    z-index: 2;
+}
+.pagination-frame .pagination li a{
+    color: #202020;
+    border-radius: 6px 6px;
+}
+
+.pagination-frame .pagination li.active a,
+.pagination-frame .pagination li:hover a {
+    background: #359f5b;
+    color: #fff;
+}
+
+/******* common Classes *********/
+.btn-green {
+    background: #13a169;
+    color: #fff;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+}
+.btn-green:hover,
+.btn-green:visited,
+.btn-green:focus{
+    background: #117e53;
+    color: #fff;
+}
+
+
+/*** Border Radius ***/
+.border-radius-4x {
+    border-radius: 4px 4px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px 4px;
+    -o-border-radius: 4px 4px;
+}
+
+.border-radius-30x {
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+}
+
+
+
+/******** Rating Block Elements *******/
+.rating-block li{
+    display:inline-block;
+    cursor: pointer;
+}
+.rating-block li .fa{
+    font-size: 16px;
+    color: #f0d600;
+}
+
+
+/*************************************************
+    Page Container
+***********************/
+.body-gradient {
+   background: #5f8395; /* Old browsers */
+background: -moz-linear-gradient(top, #5f8395 6%, #9bb7c6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #5f8395 6%,#9bb7c6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #5f8395 6%,#9bb7c6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f8395', endColorstr='#9bb7c6',GradientType=0 ); /* IE6-9 */
+    
+    width: 100%;
+    height: 820px;
+    position: absolute;
+    z-index: 0;
+}
+
+.blue-gradient {
+    height: 100%;
+    position: fixed;
+}
+
+.white-box {
+    background: #fff;
+}
+/*************  Landing Header Elements ************/
+.header-frame {
+    position: relative;
+    z-index: 1;
+}
+.header-frame .header-content {
+    position: relative;
+}
+.header-content  .row {
+    margin: 0 15px;
+}
+/***** Logo Col ****/
+.header-content .logo-col {
+    width:240px;
+    float: left;
+    position: relative;
+    left: 50%;
+    top: 0px;
+    margin-left: -350px;
+}
+.header-content .logo-col img {
+    max-width: 240px;
+}
+/***** Search Col ****/
+.header-content .search-col {
+    width: 260px;
+    float: left;
+    padding: 10px 0;
+}
+.header-content .search-col .search-box {
+    border: 2px solid #fff;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -ms-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    padding: 6px 0;
+    position: relative;
+}
+.header-content .search-col .search-box .textbox {
+    margin: 0 0 0 15px;
+    width: 200px;
+    height: 30px; 
+    font-size: 15px;
+    color: #fff;
+    background: none;
+    border: 0 none;
+}
+.header-content .search-col .search-box .textbox::-webkit-input-placeholder {
+    color: #fff;
+}
+.header-content .search-col .search-box .textbox::-moz-placeholder{
+    color: #fff;
+}
+.header-content .search-col .search-box .fa {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+}
+/***** User Option Col ****/
+.header-content .user-option-col {
+/*    width: 240px;*/
+    float: right;
+    text-align: right;
+    padding: 10px 0;
+}
+.header-content .user-option-col ul {
+    padding: 0;
+}
+.header-content .user-option-col ul li {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 15px;
+    margin-left: 5px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -ms-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+}
+.header-content .user-option-col ul li a {
+    color: #fff;
+}
+.header-content .user-option-col ul li.login {
+    background: #fff;
+}
+.header-content .user-option-col ul li.login a {
+    color: #79a0b2;
+}
+
+/***** Landing Banner Content *****/
+.header-frame .header-content .landing-banner-content {
+    padding: 50px 0;
+    text-align: center;
+}
+.header-frame .header-content .landing-banner-content .title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;    
+}
+.header-content .landing-banner-content .listing {
+    padding: 20px 0;
+    color: #000;
+    display: block;
+    font-size: 17px;
+}
+.header-content .landing-banner-content .listing .text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 0 30px;
+    vertical-align: middle;
+}
+.header-content .landing-banner-content .btn-create-account {
+    margin-top: 30px;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #08b553;
+    text-transform: uppercase;
+    background: #fff;
+    padding: 10px 30px;
+    transition: easeIn 0.6s;
+}
+.header-content .landing-banner-content .btn:hover {
+    background: #e9e9e9;
+}
+
+
+/*************  Landing Middle Content Elements ************/
+.middle-content-frame {
+    position: relative;
+    z-index: 1;
+}
+.middle-content-frame .white-box {
+    padding: 20px 30px;
+    background: #fff; 
+    box-shadow: #808080 0 0 10px;
+}
+.middle-content-frame .content-section {
+    margin: 30px auto 0;
+}
+.middle-content-frame .content-section .image-col,
+.middle-content-frame .content-section .data-col {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.middle-content-frame .content-section .image-col a {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.middle-content-frame .content-section .image-col img {
+    width:100%;
+/*    max-width: 410px;*/
+    position: relative;
+    height: 100%;
+    box-shadow: 0 0 4px #808080;
+}
+.middle-content-frame .content-section .data-col .data-section {
+    max-width: 640px;
+    margin: 0 auto;
+}
+.middle-content-frame .content-section .data-col .title {
+    margin-top: 0;
+    padding-bottom: 15px;
+    font-size: 36px;
+    color: #08b553;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 48px;
+}
+.middle-content-frame .content-section .data-col .para,
+.middle-content-frame .content-section .data-col p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #5e5e5e;
+    line-height: 24px;
+    padding: 5px 0;
+}
+.middle-content-frame .content-section .data-col .btn-block {
+    margin-top: 40px;
+}
+.middle-content-frame .content-section .data-col .btn {
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    
+}
+
+
+/******* Simple Secure Section Elements ********/
+.middle-content-frame .simple-secure-section {
+    position: relative;
+    margin-top: 50px;
+}
+.middle-content-frame .simple-secure-section .body-gradient {
+    background: #9bb7c6; /* Old browsers */
+    background: -moz-linear-gradient(top, #9bb7c6 0%, #5f8395 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9bb7c6 0%,#5f8395 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9bb7c6 0%,#5f8395 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bb7c6', endColorstr='#5f8395',GradientType=0 ); /* IE6-9 */
+    
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+
+.middle-content-frame .simple-secure-section .secure-container {
+    position: relative;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.simple-secure-section .secure-container .banner-frame {
+    position: relative;
+    width: 100%;
+}
+.simple-secure-section .secure-container .banner-frame .image {
+    width: 100%;
+    height: 100%;
+}
+.middle-content-frame .simple-secure-section .secure-container .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    padding: 20px 0 30px 80px;
+}
+.simple-secure-section .secure-container .btn-row {
+    text-align: center;
+    margin-left: 70px;
+}
+.simple-secure-section .secure-container .btn-row  .btn-join {
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    
+    background: #fff;
+    color: #08b553;
+}
+.simple-secure-section .secure-container .btn-row  .btn-join:hover {
+    background: #e7e7e7;
+}
+
+/*************  Landing Footer Elements ************/
+.footer-frame {
+    z-index: 1;
+    position: relative;
+}
+.footer-frame  .footer-content-frame {
+    background: #f4f4f4;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+.footer-frame  .footer-content-frame .foot-listing ul li {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    padding: 0 13px;
+    border-left: 2px solid #5e5e5e;
+}
+.footer-frame  .footer-content-frame .foot-listing ul li:first-child {
+    border: 0 none;
+}
+.footer-frame  .footer-content-frame .foot-listing ul li a {
+    color: #5e5e5e;
+}
+.footer-frame  .footer-content-frame .foot-listing ul li a:hover {
+    color: #08b553;
+}
+.footer-frame  .footer-content-frame .copyright-lbl {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: right;
+    padding-right: 20px;
+}
+.footer-frame  .footer-content-frame .copyright-lbl .link-text {
+    color: #08b553;
+}
+
+
+/***********************************************************
+    Login Screen Elements
+************************************/
+.membership-body {
+    height: 100%;
+    position: fixed;
+}
+.account-header .header-content .logo-col {
+    width: 300px;
+    left: inherit;
+    top: inherit;
+    margin: 30px auto 0;
+    float: inherit;
+}
+.account-header .header-content .logo-col img {
+    max-width: 100%;
+}
+.login-content-section .login-frame {
+    width: 95%;
+    max-width: 480px;
+    margin: 100px auto;
+    padding:30px 30px;
+    background: #fff;
+    
+    border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+}
+
+.login-content-section .login-frame .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #202020;
+    padding: 0 0 15px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.login-content-section .login-frame .title:after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 15px auto 0;
+    border-bottom: 2px solid #13a169;
+}
+
+.login-content-section .login-frame .btn-row {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.login-content-section .login-frame .btn-row .btn {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.login-content-section .login-frame .btm-option-block {
+    position: relative;
+}
+.login-frame .btm-option-block .fpassword {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.login-frame .btm-option-block .fpassword a {
+    color: #13a169; 
+}
+.login-frame .btm-option-block .fpassword a:hover {
+    color: #007647;
+}
+.login-footer {
+/*
+    position: absolute;
+    bottom: 0;
+*/
+    width: 100%;
+}
+
+/***********************************************************
+    Registration Screen Elements
+************************************/
+.account-form-section .registration-frame {
+    width: 95%;
+    max-width: 640px;
+    margin: 48px auto;
+    padding:30px 30px;
+    background: #fff;
+    box-shadow: 0 2px 10px #738c9a;
+    border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+}
+
+.account-form-section .registration-frame .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #202020;
+    padding: 0 0 15px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.account-form-section .registration-frame .title:after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 15px auto 0;
+    border-bottom: 2px solid #13a169;
+}
+
+.account-form-section .registration-frame .signup-option {
+    margin: 20px 0 0;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.account-form-section .registration-frame .signup-option ul {
+    text-align: center;
+    
+    max-width: 300px;
+    margin: 0 auto;
+    
+}
+.account-form-section .registration-frame .signup-option li {
+    display: inline-block;
+    width: 49%;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    float: left;
+    border: 1px solid #13a169;
+    
+      
+}
+.account-form-section .registration-frame .signup-option li:first-child {
+    border-radius: 30px 0 0 30px;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -o-border-radius: 30px 0 0 30px; 
+    
+    border-right: 0 none;
+}
+
+.account-form-section .registration-frame .signup-option li:last-child {
+    border-radius: 0 30px 30px 0;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    -o-border-radius: 0 30px 30px 0; 
+
+}
+.account-form-section .registration-frame .signup-option li a {
+    color: #13a169;
+    display: block;
+    padding: 12px 0;
+    
+}
+.account-form-section .registration-frame .signup-option li:first-child a {
+    border-radius: 30px 0 0 30px;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -o-border-radius: 30px 0 0 30px; 
+}
+.account-form-section .registration-frame .signup-option li:last-child a{
+    border-radius: 0 30px 30px 0;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    -o-border-radius: 0 30px 30px 0; 
+}
+.account-form-section .registration-frame .signup-option li a:hover,
+.account-form-section .registration-frame .signup-option li.active a {
+    background: #13a169;
+    color: #fff;
+}
+
+.account-form-section .form-container .form-group {
+    margin-bottom: 0;
+}
+.account-form-section .form-container .username {
+    position: relative;
+}
+.account-form-section .form-container .username .form-control {
+    padding-right: 40px;
+}
+.account-form-section .form-container .username .icon-frame {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    z-index: 2;
+}
+.account-form-section .form-container .username .icon-frame .fa {
+    font-size: 20px;
+}
+.account-form-section .form-container .username .icon-frame .fa-check {
+    color: #1dd85a;
+}
+.account-form-section .form-container .username .icon-frame .fa-remove {
+    color: #f00;
+}
+.account-form-section .form-container .username .example-lbl {
+    margin-top: -12px;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+.account-form-section .form-container .username .grncolor {
+    color: #13a169;
+}
+
+.account-form-section .form-container .btm-content-row {
+    padding: 50px 0 20px;
+    position: relative;
+    height: 50px;
+    vertical-align: middle;
+}
+.account-form-section .form-container .btm-content-row .login-text {
+    font-size: 13px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+.account-form-section .form-container .btm-content-row .login-text a {
+    color: #13a169;
+}
+
+.account-form-section .form-container .btm-content-row .btn-col {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.account-form-section .form-container .btm-content-row .btn-col .btn {
+    width: 100px;
+}
+
+/************* Registration page-2 Elements *************/
+.registration-frame .account-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3d3d3d;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+.registration-frame .signup-option .membership-method {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5e5e5e;
+    text-align: center;
+}
+
+.registration-frame .membership-detail-frame {
+    border: 2px solid #e1e1e1;
+    padding: 20px 15px;
+    
+    border-radius: 4px 4px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px 4px;
+    -o-border-radius: 4px 4px;
+}
+.registration-frame .membership-detail-frame .account-features {
+    border: 1px solid #13a169;
+    
+    border-radius: 8px 8px;
+    -webkit-border-radius: 8px 8px;
+    -moz-border-radius: 8px 8px;
+    -o-border-radius: 8px 8px;
+}
+.membership-detail-frame .account-features .row {
+    margin: 0;
+}
+.membership-detail-frame .account-features .features-col {
+    padding: 0;
+    text-align: center;
+}
+.membership-detail-frame .account-features .features-col .feature-content-frame {
+    cursor: pointer;
+    height: 240px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding: 20px 20px;
+}
+.membership-detail-frame .account-features .features-col .feature-content-frame:hover,
+.membership-detail-frame .account-features .features-col.active .feature-content-frame {
+    background: #f7f7f7;
+}
+.membership-detail-frame .account-features .features-col:last-child {
+     border-left: 1px solid #13a169;
+}.membership-detail-frame .account-features .features-col:first-child .feature-content-frame {
+    border-radius: 8px 0 0 8px;
+}
+.membership-detail-frame .account-features .features-col:last-child .feature-content-frame {
+    border-radius:0 8px 8px 0;
+    -webkit-border-radius:0 8px 8px 0;
+    -moz-border-radius:0 8px 8px 0;
+    -o-border-radius:0 8px 8px 0;
+}
+.membership-detail-frame .account-features .features-col .title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.membership-detail-frame .account-features .features-col .title strong {
+    margin-left: 10px;
+}
+
+.account-features .features-col .feature-listing li {
+    font-size: 13px;
+    font-weight: 500;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+ .account-features .features-col .feature-listing li .bullet-square {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #13a169;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: absolute;
+    left: 30px;
+    top: 16px;
+}
+
+.account-features .features-col .feature-listing li .text {
+    margin-left: 20px;
+    display: block;
+}
+.account-features .features-col .feature-listing li .text strong {
+    font-weight: 400;
+}
+
+.membership-notes {
+    padding: 20px 0;
+}
+.membership-notes ul li {
+    padding: 8px 0;
+    position: relative;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+.membership-notes ul li .bullet-square {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #13a169;
+    vertical-align: middle;
+    position: absolute;
+    left: 10px;
+    top: 14px;
+}
+.membership-notes ul li .text {
+    margin-left: 30px;
+    display: block;
+}
+
+.partition-row hr {
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    margin: 0;
+    border: 0 none;
+}
+.partition-row .dark-rular {
+    border-top: #dadada 1px solid;
+}
+.partition-row .light-rular {
+    border-top:  #fff 1px solid;
+}
+/******* Payment Form Element *******/
+.payment-form-section {
+    padding: 20px 0;
+}
+.account-form-section .registration-frame  .payment-form-section .title {
+    color: #3d3d3d;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.payment-form-section .form-lbl {
+    font-size: 14px;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    display: block; 
+    padding-top: 10px;
+}
+
+.payment-form-section .radio-block {
+    padding-top:5px;
+}
+
+.btm-content-row .btn-col .btn-dark-grey {
+    width: 90px !important;
+    color: #fff;
+    background: #585858;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+}
+
+/***********************************************************
+    Profile Screen Elements
+************************************/
+.profile-body-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #3e3e3e;
+}
+
+/******** HEader Frame *******/
+.inner-header-frame {
+    background: #b4b4b4;
+}
+.inner-header-frame .header-content .search-col {
+    padding-top: 20px;
+}
+.inner-header-frame .logo-col {
+    max-width: 180px;
+    margin: 10px 0 0 -320px;
+}
+.inner-header-frame .logo-col img {
+    width: 100%;
+}
+.inner-header-frame .user-option-col ul {
+    padding-top: 10px;
+}
+.inner-header-frame .user-option-col li.user-detail {
+    width: auto;
+    position: relative;
+    top: -2px;
+    background: #fff;
+}
+.inner-header-frame .user-option-col li.user-detail .thumb-rnd-col {
+    width: 32px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.inner-header-frame .user-option-col li.user-detail .thumb-rnd-col img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+.inner-header-frame .user-option-col li.user-detail .name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.inner-header-frame .user-option-col li.icon-setting {
+    background: #359f5b;
+    width: 42px;
+    height: 42px;
+    border: 0 none;
+    text-align: center;
+    padding: 10px 0 0;
+    cursor: pointer;
+}
+.inner-header-frame .user-option-col li.icon-setting .fa {
+    color: #fff;
+    font-size: 21px;
+}
+
+/*** Profile Content Frame ***/
+.profile-content-frame {
+    margin: 100px auto;
+    position: relative;
+}
+.profile-content-frame .profile-section .user-detail {
+    width: 480px;
+    text-align: center;
+    margin: 0 auto 10px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -240px;
+}
+.profile-section .user-detail .profile-image {
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+}
+.profile-section .user-detail .profile-image img {
+    width: 180px;
+    height: 180px;
+    box-shadow: 0 2px 10px #b9b9b9;
+    
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+
+.profile-section .user-detail .profile-name {
+    padding: 10px 0 0;
+}
+.profile-section .user-detail .profile-name:after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    display: block;
+    margin: 5px auto 0;
+    border-bottom: 3px solid #13a169;
+}
+.profile-section .user-detail .profile-name .name {
+    font-size: 20px;
+    font-weight: 900;
+    color: #13a169;  
+}
+.profile-section .user-detail .profile-name .logo-image {
+    display: inline-block;
+}
+
+.profile-section .user-detail .user-status {
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.profile-section .user-detail .user-status.verified {
+    color: #359f5b;
+}
+.profile-section .user-detail .user-status.report {
+    color: #f00;
+}
+.profile-section .user-detail .partition-row {
+    padding-top: 30px;
+}
+.profile-content-frame .profile-section .profile-white-box {
+    background: #f9f9f9;
+    padding: 300px 20px 20px;
+    margin-top: 100px;
+}
+.social-icon-listing .listing {
+    padding: 20px 20px;
+}
+.social-icon-listing .listing li {
+    margin: 15px 10px 0;
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    background: #e3e3e3;
+    padding: 8px 15px;
+    box-shadow: 1px 0 4px #b2b2b2;
+    
+    border-radius: 4px 4px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px 4px;
+    -o-border-radius: 4px 4px;
+}
+.social-icon-listing .listing li:hover {
+    background: #d9d9d9;
+}
+
+.social-icon-listing .listing li a {
+    color: #3d3d3d;
+    vertical-align: middle;
+    display: block;
+}
+.social-icon-listing .listing li a .fa {
+    font-size: 32px;
+}
+.social-icon-listing .listing li a .fa-facebook-square {
+    color: #0b3582;
+}
+.fa-twitter-square {
+    color: #3bbad5;
+}
+.fa-linkedin-square {
+    color: #1482b0;
+}
+.fa-google-plus-square {
+    color: #dd4d40;
+}
+.fa-instagram {
+    color: #c287ba;
+}
+.fa-skype {
+    color: #00aff0;
+}
+.fa-pinterest-square {
+    color: #BD081C
+}
+.fa-snapchat-square {
+    color: #FFFC00;
+}
+.social-icon-listing .listing li a .link {
+    margin-left: 5px;
+    width: 170px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    position: relative;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.social-icon-listing .btn-row {
+    padding: 20px 0;
+    text-align: center;
+}
+.social-icon-listing .btn-row .btn-view-more {
+    width: 120px;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    
+    background: #5e5e5e;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+}
+.social-icon-listing .btn-row .btn-view-more:hover {
+    background: #202020;
+}
+
+/************* Profile Config Frame ********/
+.profile-config-frame {
+    width: 400px;
+    height: 100%;
+    right: 0;
+    top:0;
+    z-index: 2;
+    position: fixed;
+    background: #575757;
+    display: none;
+}
+
+.config-listing-section .top-option-list {
+    padding: 15px 15px;
+}
+.config-listing-section .top-option-list li {
+    display: inline-block;
+}
+.config-listing-section .top-option-list li.user-detail {
+    width: 180px;
+    position: relative;
+    top: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+}
+.config-listing-section .top-option-list li.user-detail .thumb-rnd-col {
+    width: 32px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.config-listing-section .top-option-list li.user-detail .thumb-rnd-col img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+.config-listing-section .top-option-list li.user-detail .name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+.config-listing-section .top-option-list li.icon-setting {
+    background: #359f5b;
+    width: 42px;
+    height: 42px;
+    border: 0 none;
+    text-align: center;
+    padding: 10px 0 0;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    
+     border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+.config-listing-section .top-option-list li.icon-setting .fa {
+    color: #fff;
+    font-size: 21px;
+}
+
+.config-listing-section .config-options-list li {
+    font-size: 15px;
+    position: relative;
+}
+.config-listing-section .config-options-list li .content {
+    cursor: pointer;
+     padding: 15px 15px;
+}
+
+.config-listing-section .config-options-list li .fa-chevron-right {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    color: #202020;
+    font-size: 16px;
+}
+.config-listing-section .config-options-list li.payment-options {
+    background: #72b48b;
+    color: #fff;
+}
+.config-listing-section .config-options-list li.payment-options .content {
+    vertical-align: middle;
+}
+.config-listing-section .config-options-list li.payment-options .fa-star {
+    font-size: 24px;
+}
+.config-listing-section .config-options-list li.payment-options .text {
+    padding: 0 10px;
+}
+.config-listing-section .config-options-list li.share-page {
+    background: #e9e9e9;
+}
+.config-listing-section .config-options-list li.share-page .fa-smile-o {
+    font-size: 28px;
+    top: 4px;
+    position: relative;
+}
+.config-listing-section .config-options-list li .content .text {
+    padding: 0 10px;
+}
+.config-listing-section .config-options-list li.list-title {
+    color: #fff;
+    padding: 40px 10px 0 15px;
+}
+.config-listing-section .config-options-list li.list-title .text {
+    font-size: 16px;
+    font-weight: 500;
+}
+.config-listing-section .config-options-list li.list-title .fa {
+    font-size: 28px;
+}
+.config-listing-section .config-options-list li.edit-list {
+    background: #898989;
+    margin-bottom: 1px;
+}
+.config-listing-section .config-options-list li.edit-list .fa {
+    color: #e9e9e9;
+    font-size: 24px;
+    vertical-align: middle;
+}
+.config-listing-section .config-options-list li.edit-list .text {
+    font-size: 16px;
+    color: #fff;
+}
+
+.config-listing-section .config-options-list li.edit-list .fa-chevron-right {
+    color: #202020;
+    font-size: 16px;
+}
+.config-listing-section .config-options-list li.logout {
+    background: #353535;
+    margin: 40px 0 10px;
+    color: #fff;
+}
+.config-listing-section .config-options-list li.logout .text {
+    font-size: 16px;
+}
+.config-listing-section .config-options-list li.logout .fa {
+    font-size: 28px;
+    position: relative;
+    top: 3px;
+}
+
+.config-listing-section .config-options-list li.other-pages-link {
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.config-listing-section .config-options-list li.other-pages-link span {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0;
+    display: inline-block;
+}
+.config-listing-section .config-options-list li.other-pages-link span:before {
+    content:"|";
+    overflow: hidden;
+    padding: 0 5px;
+    color: #fff;
+}
+.config-listing-section .config-options-list li.other-pages-link span a {
+    color: #fff;
+}
+.config-listing-section .config-options-list li.other-pages-link span a:hover {
+    color: #13a169;
+}
+
+.config-listing-section .config-options-list li.other-pages-link span:first-child:before {
+    content: '';
+}
+
+/***********************************************************
+    Contact Us Screen Elements
+************************************/
+.middle-content-frame .mid-section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #202020;
+    padding: 15px 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.middle-content-frame .mid-section-title:after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    display: block;
+    margin: 15px auto 0;
+    border-bottom: 3px solid #13a169;
+}
+.contactus-container {
+    background: #fff;
+    margin: 100px auto;
+}
+.contactus-container .contactus-section {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.contactus-container .contactus-section .sub-heading {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+.contactus-container .contactus-section .form-container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 40px 0;
+}
+.contactus-container .contactus-section .form-container .btn-row {
+    padding: 30px 0 10px;
+}
+.contactus-container .contactus-section .form-container .btn-row .btn {
+    border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    
+    min-width: 110px;
+    height: 45px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;    
+    margin: 0 5px;
+}
+.contactus-container .contactus-section .form-container .btn-row .cancel {
+    background: #878787;
+    color: #fff;
+}
+
+/***********************************************************
+    Report User Screen Elements
+************************************/
+.report-user-frame {
+    margin: 120px auto;    
+}
+.report-user-frame .report-user-section {
+    padding: 20px 50px;    
+}
+.report-user-frame .report-user-section .form-container {
+    padding: 40px 0;
+}
+.report-user-section .form-container .btn-row {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+.report-user-section .form-container .btn-row .btn {
+     border-radius: 30px 30px;
+    -webkit-border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+    -o-border-radius: 30px 30px;
+    
+    min-width: 110px;
+    height: 45px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;    
+    margin: 0 5px;
+}
+.report-user-section .form-container .btn-row .cancel {
+    background: #878787;
+    color: #fff;
+}
+
+/***********************************************************
+    Search Results Screen Elements
+************************************/
+.search-result-frame {
+    margin: 120px auto;
+}
+
+.search-result-frame .search-listing-frame {
+    padding: 20px 0
+}
+.search-listing-frame .listing-col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.search-listing-frame .listing-col .col-content {
+    padding: 10px 10px 15px;
+    text-align: center;
+    background: #f6f6f6;
+    box-shadow: 0 1px 6px #b6b6b6;
+    
+     border-radius: 8px 8px;
+    -webkit-border-radius: 8px 8px;
+    -moz-border-radius: 8px 8px;
+    -o-border-radius: 8px 8px;
+}
+.search-listing-frame .listing-col .col-content .status-logo {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    display: block;
+    width: 40px;
+}
+.search-listing-frame .listing-col .col-content .status-logo img {
+    width: 100%;
+}
+.search-listing-frame .listing-col .col-content .profile-pic {
+    width: 150px;
+    margin: 10px auto;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+.search-listing-frame .listing-col .col-content .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #04c34f;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+}
+.search-listing-frame .listing-col .col-content .profile-name {
+    color: #13a169;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.search-listing-frame .listing-col .col-content .profile-name::after {
+    border-bottom: 3px solid #13a169;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 8px auto 0;
+    width: 60px;
+}
+.search-listing-frame .listing-col .col-content .profile-status {
+    font-size: 13px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.search-listing-frame .listing-col .col-content .verified {
+    color: #359f5b;
+}
+.search-listing-frame .listing-col .col-content .name {
+    color: #3d3d3d;
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/***********************************************************
+    Help Screen Elements
+************************************/
+.content-box.white-box {
+    margin: 50px auto;
+    padding: 20px 30px;
+}
+
+.mid-content-section .sub-heading {
+    font-size: 17px;
+    font-weight: 500;
+    color: #3d3d3d;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+}
+.mid-content-section .content-row {
+    padding: 15px 0;
+}
+.mid-content-section .content-row h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3d3d3d;
+    padding-top: 20px;
+}
+.mid-content-section .content-row ul {
+    margin-left: 15px;
+    display: block;
+}
+.mid-content-section .content-row ul li {
+    list-style: circle;
+    padding: 4px 10px 0;
+    font-size: 14px;
+    color: #3d3d3d;
+    font-weight: 400;
+}
+.mid-content-section .content-row p,
+.mid-content-section .content-row .para {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+.mid-content-section .content-row strong {
+    color: #3d3d3d;
+    font-weight: 500;
+}
+
+
+/***********************************************************
+    Profile Screen Listing Module Elements
+************************************/
+
+.profile-config-frame .list-content-frame {
+    width: 400px;
+    height: 100%;
+/*    padding: 10px 0;*/
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    right: 0;
+    color: #fff;
+    background: #575757;
+}
+.profile-config-frame .list-content-frame .back-arrow {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 33px;
+    left: 20px;
+    z-index: 3;
+    cursor: pointer;
+}
+.profile-config-frame .list-content-frame .module-title {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    padding: 20px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+}
+.profile-config-frame .list-content-frame .content-area {
+    padding: 20px 20px;
+}
+.profile-config-frame .list-content-frame .content-area p,
+.profile-config-frame .list-content-frame .content-area .para {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/***** Payment Details Block *******/
+.payment-options-screen .account-details-section {
+    padding: 0 10px;
+}
+.account-details-section .edit-row {
+    text-align: right;
+    display: none;
+}
+.account-details-section .edit-row .fa {
+    font-size: 24px;
+    color: #359f5b;
+    cursor: pointer;
+}
+.account-details-section .details-row {
+    padding-top: 15px;
+    margin: 0;
+}
+.account-details-section .details-row .term {
+    width: 150px;
+    float:left;
+    font-size: 15px;
+    font-weight: 500;
+}
+.account-details-section .details-row .desc {
+    float:left;
+    font-size: 14px;
+    font-weight: 400;
+}
+.account-details-section .details-row .check-label {
+    font-size: 14px;
+    text-align: left;
+    float:left;
+    width: 100%;
+}
+.account-details-section .details-row .check-label input.checkbox {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.account-details-section .card-details {
+    padding: 10px 0;
+}
+.account-details-section .card-details .title-text {
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 0;
+    border-bottom: 1px solid #808080;
+}
+.account-details-section .card-details .card-text {
+    font-size: 16px;
+    padding: 10px 0;
+}
+.account-details-section .card-details .btn-row {
+    padding-top: 20px;
+}
+.account-details-section .card-details .add-card {
+    background: #359f5b;
+    border: 0 none;
+    position: relative;
+    right: 0;
+    padding: 8px 20px;
+    font-size: 14px;
+    
+    border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+}
+.account-details-section .card-details .delete-card {
+    background: #b4b4b4;
+    border: 0 none;
+    position: relative;
+    right: 0;
+    padding: 8px 20px;
+    font-size: 13px;
+    margin-left: 10px;
+    
+    border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+}
+
+
+/***** Social sharing listing Block *******/
+.profile-config-frame .list-content-frame .content-area .social-listing {
+    padding: 15px 0;
+}
+.profile-config-frame .list-content-frame .content-area .social-listing li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+.profile-config-frame .list-content-frame .content-area .social-listing li .fa {
+    font-size: 36px;
+    display: block;
+    color: #b4b4b4;
+}
+.profile-config-frame .list-content-frame .content-area .social-listing li .fa:hover {
+    color: #fff;
+}
+
+/***** Edit Profile Block *******/
+.edit-form-section .form-container .form-lbl {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.edit-form-section .form-container .file-upload {
+    width: 100%;
+    font-size: 14px;
+}
+
+.edit-form-section .form-container .form-title {
+    border-bottom: 1px solid #808080;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-form-section .form-container .btn-row {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+.edit-form-section .form-container .btn-row  .btn-save-changes {
+    width: 240px;
+    padding: 10px 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0 none;
+    background: #359f5b;
+    
+    border-radius: 30px 30px;
+    -webkit- border-radius: 30px 30px;
+    -moz-border-radius: 30px 30px;
+}
+
+
+/***** Social Links Block *******/
+.social-links-frame .social-links {
+    padding: 20px 0;
+}
+
+.social-links-frame .social-links li {
+    padding: 15px 25px;
+    margin: 0 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    border: #606060 1px solid;
+}
+.social-links-frame .social-links li .icon {
+    display: block;
+}
+.social-links-frame .social-links li .icon .fa {
+    font-size: 48px;
+    color: #b4b4b4;
+    display: block;
+}
+
+.social-links-frame .social-links li:hover {
+    background: #606060;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

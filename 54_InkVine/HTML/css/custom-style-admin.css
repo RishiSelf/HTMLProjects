@@ -1,0 +1,64 @@
+header.user-header .side-menu-list, 
+header.expert-header .side-menu-list {
+    
+}
+
+.admin-right-content .search-section {
+    width: 300px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+.admin-right-content .search-section .textbox {
+    width: 270px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #3d3d3d;
+    padding: 0 10px;
+    border: 0 none;
+    
+}
+.admin-right-content .search-section .fa {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+    color: #3d3d3d;
+    font-size: 20px;
+}
+
+.account-section {
+    padding: 10px 0;
+}
+.account-section .title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #6c6c6c;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.account-section .table {
+    border: 1px solid #dadada;
+}
+.account-section .table thead tr th,
+.account-section .table tbody tr td {
+    border-right: 1px solid #dadada;
+    font-size: 13px;
+    text-align: center;
+}
+.account-section .table thead tr th {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.account-section .table tbody tr td .action-lbl .fa {
+    font-size: 18px;
+    margin: 0 4px;
+    color: #6c6c6c;
+    cursor: pointer;
+}
+.account-section .table tbody tr td .action-lbl .fa:hover {
+    color: #3d3d3d;
+}
